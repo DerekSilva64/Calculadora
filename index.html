@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Calculadora</title>
+        
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+
+    <body>
+        
+        <main class="container">
+            <div class="calc">
+
+                <div class="display-box">
+                    <input class="display" type="text" readonly>
+                </div>
+
+                <table class="teclado">
+                    <tr>
+                        <td><button class="btn btn-1" onclick="insert('1')">1</button></td>
+                        <td><button class="btn btn-2" onclick="insert('2')">2</button></td>
+                        <td><button class="btn btn-3" onclick="insert('3')">3</button></td>
+                        <td><button class="btn btn-soma" onclick="operacao('+')">+</button></td>
+                        <td><button class="btn btn-potencia" onclick="operacao('^')">^</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn btn-4" onclick="insert('4')">4</button></td>
+                        <td><button class="btn btn-5" onclick="insert('5')">5</button></td>
+                        <td><button class="btn btn-6" onclick="insert('6')">6</button></td>
+                        <td><button class="btn btn-substracao" onclick="operacao('-')">-</button></td>
+                        <td><button class="btn btn-raiz" onclick="operacao1('r')">√</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn btn-7" onclick="insert('7')">7</button></td>
+                        <td><button class="btn btn-8" onclick="insert('8')">8</button></td>
+                        <td><button class="btn btn-9" onclick="insert('9')">9</button></td>
+                        <td><button class="btn btn-vezes" onclick="operacao('x')">x</button></td>
+                        <td><button class="btn btn-porcento" onclick="operacao1('p')">%</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn btn-ponto">.</button></td>
+                        <td><button class="btn btn-0" onclick="insert('0')">0</button></td>
+                        <td><button class="btn btn-inverte" onclick="operacao1('i')">1/x</button></td>
+                        <td><button class="btn btn-divide" onclick="operacao('/')">/</button></td>
+                        <td><button class="btn btn-oposto" onclick="operacao1('o')">+/-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn btn-sen" onclick="operacao1('s')">sen</button></td>
+                        <td><button class="btn btn-cos" onclick="operacao1('c')">cos</button></td>
+                        <td><button class="btn btn-tan" onclick="operacao1('t')">tan</button></td>
+                        <td><button class="btn btn-apaga">C</button></td>
+                        <td><button class="btn btn-igual">=</button></td>
+                    </tr>
+                </table>
+
+                <div class="btns-historico">
+                    <button class="hist btn-hist">Histórico</button>
+                    <button class="hist btn-apaga-hist">Apaga histórico</button>
+                </div>
+
+            </div>
+
+            <div class="historico hidden">
+                <h1>Histórico</h1>
+                <p class="expressao"></p>
+                <button class="btn-fechar">Fechar</button>
+            </div>
+        </main>
+        
+        <script src="js/script.js"></script>
+
+    </body>
+
+</html>
